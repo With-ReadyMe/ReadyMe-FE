@@ -8,7 +8,7 @@ const navItems = [
     { name: "ABOUT US", path: "/aboutus" },
     { name: "INTERVIEW", path: "/interview" },
     { name: "FEED", path: "/feed" },
-    { name: "PROJECT", path: "/project" },
+    { name: "PROJECT", path: "/projects" },
 ];
 
 const NavMenu: React.FC = () => {
