@@ -14,13 +14,20 @@ const navItems = [
 const NavMenu: React.FC = () => {
     const location = useLocation();
 
+    const isActive = (path: string) => {
+        if (path === "/projects") {
+            return location.pathname.startsWith("/projects");
+        }
+        return location.pathname === path;
+    };
+
     return (
         <NavMenuWrapper>
             {navItems.map(({ name, path }) => (
                 <NavItem
                     key={path}
                     to={path}
-                    $active={location.pathname === path}
+                    $active={isActive(path)}
                 >
                     {name}
                 </NavItem>

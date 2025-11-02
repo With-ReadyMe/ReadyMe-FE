@@ -2,8 +2,34 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     min-height: 100vh;
-    background: linear-gradient(180deg, #f8f9ff 0%, #e8f0ff 100%);
+    background: #f5f7ff;
     padding-top: 80px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -10%;
+        right: 10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(200, 218, 255, 0.4) 0%, rgba(200, 218, 255, 0) 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -15%;
+        left: 5%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(168, 195, 255, 0.3) 0%, rgba(168, 195, 255, 0) 70%);
+        border-radius: 50%;
+        z-index: 0;
+    }
 `;
 
 export const FormWrapper = styled.div`
@@ -13,6 +39,8 @@ export const FormWrapper = styled.div`
     background-color: #fff;
     border-radius: 24px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    z-index: 1;
 `;
 
 export const FormRow = styled.div`
@@ -68,31 +96,40 @@ export const LargeInput = styled(Input)`
     border-color: #d5e0ff;
 `;
 
-export const PrivacyToggle = styled.div`
+export const PrivacyToggle = styled.button<{ $active: boolean }>`
+    width: 70px;
+    height: 36px;
+    border-radius: 18px;
+    border: none;
+    background-color: ${(props) => (props.$active ? "#4a90e2" : "#d1d5db")};
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
     display: flex;
-    gap: 8px;
+    align-items: center;
+    padding: 2px;
+
+    &:hover {
+        background-color: ${(props) => (props.$active ? "#357abd" : "#9ca3af")};
+    }
 `;
 
-export const ToggleButton = styled.button<{ $active: boolean }>`
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    border: 1px solid ${(props) => (props.$active ? "#4a90e2" : "#e5e5e5")};
-    background-color: ${(props) => (props.$active ? "#e8f0ff" : "#fff")};
-    color: ${(props) => (props.$active ? "#4a90e2" : "#999")};
-    cursor: pointer;
+export const ToggleCircle = styled.div<{ $active: boolean }>`
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
-
-    &:hover {
-        border-color: #4a90e2;
-    }
+    transition: transform 0.3s ease;
+    transform: ${(props) => (props.$active ? "translateX(34px)" : "translateX(0)")};
+    color: ${(props) => (props.$active ? "#4a90e2" : "#6b7280")};
 
     svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 `;
 

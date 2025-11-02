@@ -10,7 +10,7 @@ import {
     Input,
     LargeInput,
     PrivacyToggle,
-    ToggleButton,
+    ToggleCircle,
     SubmitButton,
 } from "../../styled/Project/ProjectCreateStyles";
 
@@ -210,21 +210,10 @@ const ProjectCreate = () => {
                                 onChange={handleInputChange}
                                 placeholder="프로젝트명을 입력해 주세요."
                             />
-                            <PrivacyToggle>
-                                <ToggleButton
-                                    $active={!isPrivate}
-                                    onClick={() => setIsPrivate(false)}
-                                    type="button"
-                                >
-                                    <UnlockIcon />
-                                </ToggleButton>
-                                <ToggleButton
-                                    $active={isPrivate}
-                                    onClick={() => setIsPrivate(true)}
-                                    type="button"
-                                >
-                                    <LockIcon />
-                                </ToggleButton>
+                            <PrivacyToggle onClick={() => setIsPrivate(!isPrivate)} $active={isPrivate}>
+                                <ToggleCircle $active={isPrivate}>
+                                    {isPrivate ? <LockIcon /> : <UnlockIcon />}
+                                </ToggleCircle>
                             </PrivacyToggle>
                         </InputWrapper>
                     </FormRow>
