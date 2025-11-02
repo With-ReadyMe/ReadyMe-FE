@@ -1,0 +1,32 @@
+import React from "react";
+import { useLocation, Link } from "react-router-dom";
+import { NavMenuWrapper, NavItem } from "../../styled/Header/NavMenuStyles";
+
+const navItems = [
+    { name: "PORTFOLIO", path: "/portfolio" },
+    { name: "RESUME", path: "/resume" },
+    { name: "ABOUT US", path: "/aboutus" },
+    { name: "INTERVIEW", path: "/interview" },
+    { name: "FEED", path: "/feed" },
+    { name: "PROJECT", path: "/project" },
+];
+
+const NavMenu: React.FC = () => {
+    const location = useLocation();
+
+    return (
+        <NavMenuWrapper>
+            {navItems.map(({ name, path }) => (
+                <NavItem
+                    key={path}
+                    to={path}
+                    $active={location.pathname === path}
+                >
+                    {name}
+                </NavItem>
+            ))}
+        </NavMenuWrapper>
+    );
+};
+
+export default NavMenu;
