@@ -57,7 +57,7 @@ export const Input = styled.input`
     transition: all ease 0.3s;
 
     &:focus ~ ${PlaceHolder}, &:not(:placeholder-shown) ~ ${PlaceHolder} {
-        left: -3%;
+        left: 0%;
     }
     &:focus
         ~ ${InputBackground},

@@ -70,6 +70,7 @@ export const FormWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    gap: 0.7em;
 
     flex-direction: column;
 `;
@@ -115,12 +116,29 @@ export const GoRegisterWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    margin: 1em 0;
-
     color: #ababab;
 
     p {
         font-size: 0.8em;
         font-weight: 400;
     }
+    p:nth-of-type(2) {
+        text-decoration: underline;
+    }
+    p:nth-of-type(2):hover {
+        cursor: pointer;
+    }
+`;
+
+export const SocialBtnWrapper = styled.div`
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 1em;
 `;
