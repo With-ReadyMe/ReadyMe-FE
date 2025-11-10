@@ -9,8 +9,6 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
-
-    margin: 0.5em 0;
 `;
 
 export const InputBackground = styled.div`

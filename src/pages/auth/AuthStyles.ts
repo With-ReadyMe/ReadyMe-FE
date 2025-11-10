@@ -97,4 +97,30 @@ export const LogoWrapper = styled.div`
 
 export const InputWrapper = styled.div`
     width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+
+    gap: 0.5em;
+`;
+
+export const GoRegisterWrapper = styled.div`
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 1em 0;
+
+    color: #ababab;
+
+    p {
+        font-size: 0.8em;
+        font-weight: 400;
+    }
 `;
