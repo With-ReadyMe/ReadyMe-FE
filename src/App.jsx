@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from "./pages/landingPage/AboutUs";
 import ProjectList from "./pages/projects/projectList/ProjectList";
 import ProjectCreate from "./pages/projects/projectCreate/ProjectCreate";
+import Auth from "./pages/auth/Auth";
 import GlobalStyle from "./styled/Global";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <GlobalStyle />
       <Router>
         <Routes>
+          <Route path="/auth" element={<Auth />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/projects" element={<ProjectList />} />
           <Route path="/projects/new" element={<ProjectCreate />} />
