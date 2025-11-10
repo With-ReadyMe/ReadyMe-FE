@@ -43,8 +43,10 @@ export const SlideWrapperRegister = styled.div<{ isLogin: boolean }>`
 `;
 
 export const Wrapper = styled.div`
+    position: relative;
     width: 75%;
-    height: 80%;
+    height: 85%;
+
     background-color: #f4f4fe;
     border-radius: 40px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
@@ -52,6 +54,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3%;
 
     flex-direction: row;
 
@@ -59,7 +62,7 @@ export const Wrapper = styled.div`
 `;
 
 export const FormWrapper = styled.div`
-    width: 35%;
+    width: 38%;
     height: 80%;
 
     background-color: #ffffff;
@@ -80,10 +83,12 @@ export const DescriptionWrapper = styled.div`
     height: 80%;
 
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
+    gap: 1.5em;
+
+    padding: 4% 0;
 `;
 
 export const LogoWrapper = styled.div`
@@ -105,6 +110,18 @@ export const InputWrapper = styled.div`
     align-items: center;
 
     flex-direction: column;
+
+    gap: 0.5em;
+`;
+export const InputRowWrapper = styled.div`
+    width: 100%;
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: row;
 
     gap: 0.5em;
 `;
@@ -140,5 +157,12 @@ export const SocialBtnWrapper = styled.div`
 
     flex-direction: column;
 
-    gap: 1em;
+    gap: 0.6em;
+`;
+
+export const DescriptionH1 = styled.h1``;
+export const Description = styled.p`
+    width: 100%;
+    font-weight: 200;
+    letter-spacing: 0.3px;
 `;
