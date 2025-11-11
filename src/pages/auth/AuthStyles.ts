@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { WipeUptoDown, WipeDowntoUp, FadeIn } from "./AuthAnimationStyles";
 
 export const BackgroundWrapper = styled.div`
     background-color: #b5ccf7;
@@ -44,7 +45,7 @@ export const SlideWrapperRegister = styled.div<{ isLogin: boolean }>`
 
 export const Wrapper = styled.div`
     position: relative;
-    width: 75%;
+    width: 70%;
     height: 85%;
 
     background-color: #f4f4fe;
@@ -59,6 +60,8 @@ export const Wrapper = styled.div`
     flex-direction: row;
 
     overflow: hidden;
+
+    animation: ${WipeUptoDown} 0.8s cubic-bezier(0.25, 1.2, 0.5, 1) forwards;
 `;
 
 export const FormWrapper = styled.div`
@@ -76,6 +79,8 @@ export const FormWrapper = styled.div`
     gap: 0.7em;
 
     flex-direction: column;
+
+    animation: ${WipeDowntoUp} 1s cubic-bezier(0.25, 1.2, 0.5, 1) forwards;
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -89,6 +94,10 @@ export const DescriptionWrapper = styled.div`
     gap: 1.5em;
 
     padding: 4% 0;
+
+    opacity: 0;
+
+    animation: ${FadeIn} 1.2s cubic-bezier(0.25, 1.2, 0.5, 1) 0.5s forwards;
 `;
 
 export const LogoWrapper = styled.div`

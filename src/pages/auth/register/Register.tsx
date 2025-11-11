@@ -65,6 +65,10 @@ const Register = ({ setIsReg }) => {
                     <p onClick={() => setIsReg(true)}>Log in</p>
                 </A.GoRegisterWrapper>
             </A.FormWrapper>
+            <R.PersonWrapper>
+                <R.Person src="/img/man.png" />
+                <R.PersonBg src="/img/wave-1.png" />
+            </R.PersonWrapper>
         </A.Wrapper>
     );
 };

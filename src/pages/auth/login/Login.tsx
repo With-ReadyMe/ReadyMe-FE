@@ -63,6 +63,10 @@ const Login = ({ setIsLogin }) => {
                     Now’s the time to know yourself and show yourself off!
                 </A.Description>
             </A.DescriptionWrapper>
+            <L.PersonWrapper>
+                <L.Person src="/img/woman.png" />
+                <L.PersonBg src="/img/wave.png" />
+            </L.PersonWrapper>
         </A.Wrapper>
     );
 };
