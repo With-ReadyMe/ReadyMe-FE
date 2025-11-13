@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "./AuthBtnStyles";
 
 interface AuthBtnProps {
@@ -24,8 +25,19 @@ const UserIcon = () => (
 );
 
 const AuthBtn: React.FC<AuthBtnProps> = ({ isLoggedIn }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (isLoggedIn) {
+      // TODO: Navigate to user profile page
+      navigate("/profile");
+    } else {
+      navigate("/auth");
+    }
+  };
+
   return (
-    <Button>
+    <Button onClick={handleClick}>
       <UserIcon />
       {isLoggedIn ? "MY PROFILE" : "LOGIN"}
     </Button>
