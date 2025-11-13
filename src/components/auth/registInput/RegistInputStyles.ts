@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-    width: 100%;
+export const Wrapper = styled.div<{ width?: string }>`
+    width: ${(props) => props.width || "100%"};
 
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+`;
+
+export const LabelRow = styled.div`
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    margin: 0.3em 0 0.1em 0;
+    padding: 0 0.5em;
 `;
 export const InputWrapper = styled.div`
     position: relative;
@@ -72,7 +80,15 @@ export const Input = styled.input`
 `;
 
 export const Tag = styled.h4`
-    margin: 0.3em 0 0.1em 0;
-    padding: 0 0.5em;
+    margin: 0;
+    padding: 0;
     font-weight: 600;
+`;
+
+export const HelpText = styled.span`
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #9ca3af;
 `;
