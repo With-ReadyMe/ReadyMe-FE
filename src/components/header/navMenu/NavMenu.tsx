@@ -18,6 +18,9 @@ const NavMenu: React.FC = () => {
     if (path === "/projects") {
       return location.pathname.startsWith("/projects");
     }
+    if (path === "/portfolio") {
+      return location.pathname.startsWith("/portfolio");
+    }
     return location.pathname === path;
   };
 
