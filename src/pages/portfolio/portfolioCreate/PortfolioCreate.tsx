@@ -24,6 +24,7 @@ import {
     PreviousButton,
     NextButton,
 } from "./PortfolioCreateStyles.ts";
+import TechTag from "../../../components/portfolio/techTag/TechTag.tsx";
 
 const PortfolioCreate = () => {
     const [currentStep, setCurrentStep] = useState(1);
@@ -54,7 +55,9 @@ const PortfolioCreate = () => {
     };
 
     const handleFileUploadClick = () => {
-        const input = document.getElementById("profile-image-input") as HTMLInputElement;
+        const input = document.getElementById(
+            "profile-image-input"
+        ) as HTMLInputElement;
         if (input) {
             input.click();
         }
@@ -145,10 +148,16 @@ const PortfolioCreate = () => {
                                     </CameraIcon>
                                     {showImageMenu && (
                                         <ImageMenu>
-                                            <ImageMenuItem onClick={handleFileUploadClick}>
+                                            <ImageMenuItem
+                                                onClick={handleFileUploadClick}
+                                            >
                                                 파일 업로드
                                             </ImageMenuItem>
-                                            <ImageMenuItem onClick={handleDefaultImageClick}>
+                                            <ImageMenuItem
+                                                onClick={
+                                                    handleDefaultImageClick
+                                                }
+                                            >
                                                 기본 이미지
                                             </ImageMenuItem>
                                         </ImageMenu>

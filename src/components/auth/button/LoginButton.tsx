@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from ".//LoginButtonStyles";
+import * as S from "./LoginButtonStyles";
 
 interface LoginButtonProps {
     placeholder: string;
